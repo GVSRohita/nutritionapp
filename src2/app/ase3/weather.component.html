@@ -1,0 +1,30 @@
+<h1>Weather Report</h1>
+Country Name:<input type="text" [(ngModel)]="mcountry">
+City Name:<input type="text" [(ngModel)]="mcity">
+<input type="button" value="Weather Report" (click)="getAllDetails()">
+<div #table1>
+    All
+    <table border="1" style="width:100%">
+        <tr>
+            <th>temp </th>
+            <th>temp_min</th>
+            <th>temp_max </th>
+            <th>pressure </th>
+            <th>sea_level</th>
+            <th>grnd_level</th>
+            <th>humidity</th>
+            <th>temp_kf</th>
+        </tr>
+        <tr *ngFor="let x of weatherReport.list">
+            <td> {{ x.main.temp }} </td>
+            <td> {{ x.main.temp_min }} </td>
+            <td> {{ x.main.temp_max }} </td>
+            <td> {{ x.main.pressure }} </td>
+            <td> {{ x.main.sea_level }} </td>
+            <td> {{ x.main.grnd_level }} </td>
+            <td> {{ x.main.humidity }} </td>
+            <td> {{ x.main.temp_kf }} </td>
+            <td> {{ x.dt_txt }} </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,52 @@
+<div class="bg-dark" style="min-height: 600px;">
+    <div class="container" style="padding: 10px;">
+        <div class="card card-login mx-auto mt-5">
+            <div class="card-header">Register</div>
+            <div class="card-body">
+                <form id="login_form">
+                    <label>Name</label>
+                    <br>
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            <input id="USER_ID" type="text" name="USER_ID" class="form-control" [(ngModel)]="userObj.Name"
+                                placeholder="User ID" #USER_ID="ngModel" required class="form-control" autofocus="autofocus">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Id</label>
+                        <br>
+                        <div class="form-label-group">
+                            <input type="text" id="EmailId" name="EmailId" class="form-control" name="Password"
+                                placeholder="Email Id" [(ngModel)]="userObj.EmailId" #EmailId="ngModel" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>User Id</label>
+                        <br>
+                        <div class="form-label-group">
+                            <input type="text" id="UserId" name="EmailId" class="form-control" name="UserId"
+                                placeholder="Email Id" [(ngModel)]="userObj.Id" #UserId="ngModel" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <br>
+                        <div class="form-label-group">
+                            <input type="password" id="UserId" name="Password" class="form-control" name="Password"
+                                placeholder="Email Id" [(ngModel)]="userObj.Pwd" #pwd="ngModel" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Repeat Password</label>
+                        <br>
+                        <div class="form-label-group">
+                            <input type="text" id="UserId" name="Password" class="form-control" name="Password"
+                                placeholder="Email Id" [(ngModel)]="RepeatPwd" #pwd1="ngModel" required>
+                        </div>
+                    </div>
+                    <button [disabled]="!(RepeatPwd == userObj.Pwd)" (click)="registerUser()" class="btn btn-primary btn-block">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

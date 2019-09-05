@@ -1,0 +1,24 @@
+<h1 style="text-align: center; margin: 20px;">Nutrition Report</h1>
+<div #table1>
+    <table border="1" style="width:50%; margin: auto; font-size: 20px;">
+        <tr>
+            <td> Food Item: </td>
+            <td> <input type="text" [(ngModel)]="searchString" class="form-control"> </td>
+            <td><input type="button" [disabled]="(this.searchString == '')" value="Click" (click)="getAllDetails()" class="btn btn-primary btn-block"></td>
+        </tr>
+        <tr>
+            <td colspan=3> Nutrition Details of <b>{{searchString}}</b> </td>
+        </tr>
+        <tr>
+            <td colspan=2> Weight, Grams: </td>
+            <td>
+                <span *ngIf="!(nutritionObj.hits[0] === undefined)">{{nutritionObj.hits[0].fields.nf_serving_weight_grams }}</span> </td>
+        </tr>
+        <tr>
+            <td colspan=2> Calories: </td>
+            <td>
+                <span *ngIf="!(nutritionObj.hits[0] === undefined)">{{ nutritionObj.hits[0].fields.nf_calories
+                    }} </span></td>
+        </tr>
+    </table>
+</div>

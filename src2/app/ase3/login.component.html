@@ -1,0 +1,28 @@
+<div class="bg-dark" style="min-height: 600px;">
+    <div class="container" style="padding: 20px;">
+        <div class="card card-login mx-auto mt-5">
+            <div class="card-header">Login</div>
+            <div class="card-body" style="margin: 20px;">
+                <form id="login_form">
+                    <label>User ID</label>
+                    <br>
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            <input id="USER_ID" type="text" name="USER_ID" class="form-control" [(ngModel)]="userObj.Id"
+                                placeholder="User ID" #userId="ngModel" required class="form-control" autofocus="autofocus">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <br>
+                        <div class="form-label-group">
+                            <input type="password" id="PWD" name="PWD" class="form-control" name="Password" placeholder="Password"
+                                [(ngModel)]="userObj.Pwd" #pwd="ngModel" required>
+                        </div>
+                    </div>
+                    <button (click)="verifyUser()" class="btn btn-primary btn-block">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
