@@ -4,7 +4,8 @@ import { LocalStorageService } from './persistence.service';
 
 @Component({
     selector: 'logout',
-    templateUrl: 'logout.component.html'
+    templateUrl: 'logout.component.html',
+    styleUrls: ['./logout.css']
 })
 export class LogoutComponent {
     storageService: LocalStorageService;

@@ -27,4 +27,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 # nutritionapp
 This is a nutrition app which allows the user to login and shows the calories and weight in grams of the product typed
->>>>>>> 8f2a887e2fc16e215816dfd018055928535c32a3
