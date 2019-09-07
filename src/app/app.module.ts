@@ -13,6 +13,7 @@ import { LogoutComponent } from './ase3/logout.component';
 import { AppComponent } from './app.component';
 
 const appRoutes: Routes = [
+  {path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'register', component: Register },
   { path: 'login', component: Login },
   { path: 'nutrition', component: NutritionComponent },

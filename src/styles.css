@@ -2,14 +2,18 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
+  margin: 0px;
+  cursor: auto;
   font-family : verdana;
   font-size: 12pt;
 }
 
 .banner {
-  background-color:white;
-  color:red;
+  background-color:black;
+  color:blue;
   padding:5px;
+  min-width: 100%;
+  display: inline-block;
   font-family: Arial;
   font-size:20pt;
   font-weight:bold;

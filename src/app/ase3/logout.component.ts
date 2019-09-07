@@ -18,4 +18,6 @@ export class LogoutComponent {
         this.storageService.logout();
         this.router.navigate(['/login']);
     }
+
+
 }

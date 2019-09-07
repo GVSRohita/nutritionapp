@@ -29,6 +29,10 @@ export class NutritionComponent implements OnInit {
     }
   }
 
+  forLogOut() {
+    this.router.navigate(['/login']);
+  }
+
   getAllDetails() {
     this.nutritionObj;
       let url: string = 'https://api.nutritionix.com/v1_1/search/' + this.searchString + '?results=0:1&fields=*&appId=13a1f6fd&appKey=%2046773124bc5928d40bdb1da6fef38c4b';

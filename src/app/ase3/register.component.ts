@@ -24,7 +24,7 @@ export class Register {
     storageService: LocalStorageService;
     registrationResult: boolean = false;
 
-    constructor(private http: HttpClient, private localStorageService: LocalStorageService) {
+    constructor(private http: HttpClient, private localStorageService: LocalStorageService, private router: Router) {
         this.userObj = new User();
         this.userObj.Id = "";
         this.userObj.Name = "";
@@ -39,6 +39,7 @@ export class Register {
             this.registrationResult = this.storageService.storeOnLocalStorage(this.userObj);
             if (this.registrationResult) {
                 alert('Registration Success!');
+              this.router.navigate(['/login']);
             } else {
                 alert('Registration failed!');
             }

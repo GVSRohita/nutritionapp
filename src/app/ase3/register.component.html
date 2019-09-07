@@ -40,11 +40,11 @@
                         <label>Repeat Password</label>
                         <br>
                         <div class="form-label-group">
-                            <input type="text" id="UserId" name="Password" class="form-control" name="Password"
+                            <input type="password" id="UserId" name="Password" class="form-control" name="Password"
                                 placeholder="Email Id" [(ngModel)]="RepeatPwd" #pwd1="ngModel" required>
                         </div>
                     </div>
-                    <button [disabled]="!(RepeatPwd == userObj.Pwd)" (click)="registerUser()" class="btn btn-primary btn-block">Register</button>
+                    <button [disabled]="!(RepeatPwd == userObj.Pwd)" (click)="registerUser()" class="btn btn-success btn-block">Register</button>
                 </form>
             </div>
         </div>

@@ -1,4 +1,5 @@
-<div class="bg-dark" style="min-height: 600px;">
+<div class="bg-dark">
+  <!--img src="./app/ase3/images/vegetables-background.jpg" alt="vegetable image" height="800" width="1200"/-->
     <div class="container" style="padding: 20px;">
         <div class="card card-login mx-auto mt-5">
             <div class="card-header">Login</div>
@@ -20,7 +21,9 @@
                                 [(ngModel)]="userObj.Pwd" #pwd="ngModel" required>
                         </div>
                     </div>
-                    <button (click)="verifyUser()" class="btn btn-primary btn-block">Login</button>
+                    <button  (click)="verifyUser()" class="btn btn-success  btn-block">Login</button>
+                    <br>
+                    <div style="text-align: center"> <a  [routerLink]="['/register']">New user? Register here!</a> </div>
                 </form>
             </div>
         </div>
